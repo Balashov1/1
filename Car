@@ -1,0 +1,66 @@
+package car;
+
+
+public class Car {
+  
+    
+    private String encapsulation; // ЧТО инкапсулировано
+    
+    private String outside; // что выставлено наружу
+    
+    private int amount;
+    
+    private int amount1;
+    
+    
+        public String getEncapsulation(){
+            return encapsulation;
+        }
+    
+        public void setEncapsulation(String newEncapsulation){
+            encapsulation = newEncapsulation;
+        }
+            
+        public String getOutside(){
+            return outside;
+        }
+    
+        public void setOutside(String newOutside){
+            outside = newOutside;
+        }
+    
+        public int getAmount(){
+            return amount;
+       }
+          
+        public void setAmount(int newAmount){
+            if(newAmount>0){
+            amount = newAmount;
+            }else{
+                System.out.println("Это значение "+newAmount+" не должно быть отрицательным");
+            }
+        }
+        
+        public int getAmount1(){
+            return amount1;
+        }
+        
+        public void setAmount1(int newAmount1){
+            if(newAmount1>0){
+            amount1 = newAmount1;
+           }else{
+                System.out.println("Это значение "+newAmount1+" не должно быть отрицательным");
+            }
+        }
+        
+        
+        
+            public void on(){
+                System.out.println("Выставлено наружу: "+encapsulation+ " Количество: "+amount);
+            }
+
+            public void close(){
+                System.out.println("Закрыто " +outside+" Количество "+amount1);
+            }
+        
+}
